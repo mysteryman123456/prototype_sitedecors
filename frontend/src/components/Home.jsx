@@ -6,7 +6,6 @@ import Categories from "../assets/Categories";
 import HomePageSkeletonLoader from "../components/loaders/HomePageSkeletonLoader";
 import giveCategoryIdSubCategoryId from "../assets/GiveCategoryIdSubCategoryId";
 import axios from "axios";
-import AssetIcons from "../assets/AssetIcons";
 import PageNotFound from "../components/PageNotFound";
 
 const Home = () => {
@@ -138,13 +137,9 @@ const Home = () => {
                     <p className="asset-text">Included Assets</p>
                     <div className="assets">
                       {item.assets.map((asset, index) => {
-                        const assetData = AssetIcons.find(
-                          (a) => a.assets === asset
-                        );
-                        const iconClass = assetData ? assetData.icon : "";
                         return (
                           <div className="asset" key={index}>
-                            {asset} <i className={iconClass}></i>
+                            {asset} 
                           </div>
                         );
                       })}
